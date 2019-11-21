@@ -1,0 +1,30 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x17b8000 [shape=record,label="{\{void\}:S}"];
+	Node0x17b85b0 [shape=record,label="{\{void\}:SM}"];
+	Node0x17b8740 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x17b9040 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x17bb240 [shape=record,label="{\{void\}:E}"];
+	Node0x17a4628 [shape=plaintext, label ="  %4 = alloca i8*, align 8"];
+	Node0x17a4628 -> Node0x17b9040[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x17a4a08 [shape=plaintext, label ="  %7 = call i8* @__stpcpy(i8* %5, i8* %6) #3"];
+	Node0x17a4a08 -> Node0x17bb240[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x17a4ac8 [shape=plaintext, label ="  %8 = load i8*, i8** %3, align 8"];
+	Node0x17a4ac8 -> Node0x17b8000[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x17a47d8 [shape=plaintext, label ="  %5 = load i8*, i8** %3, align 8"];
+	Node0x17a47d8 -> Node0x17b8000[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x17a3b88 [shape=plaintext, label ="  %3 = alloca i8*, align 8"];
+	Node0x17a3b88 -> Node0x17b8740[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x17a4838 [shape=plaintext, label ="  %6 = load i8*, i8** %4, align 8"];
+	Node0x17a4838 -> Node0x17b85b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x17a3f98 [shape=plaintext,fontcolor=blue, label ="mystrcpy#1"];
+	Node0x17a3f98 -> Node0x17b85b0[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x17a3f70 [shape=plaintext,fontcolor=blue, label ="mystrcpy#0"];
+	Node0x17a3f70 -> Node0x17b8000[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x17a3eb8 [shape=plaintext,fontcolor=blue, label ="mystrcpy#Ret"];
+	Node0x17a3eb8 -> Node0x17b8000[arrowtail=tee,color=gray63,label="0",fontsize=8];
+	Node0x17b8740:s0 -> Node0x17b8000[arrowtail=tee,label="0, i8*",fontsize=8];
+	Node0x17b9040:s0 -> Node0x17b85b0[arrowtail=tee,label="0, i8*",fontsize=8];
+}

@@ -1,0 +1,27 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x2e3aa20 [shape=record,label="{\{void\}:R}"];
+	Node0x2e39f90 [shape=record,label="{\{void\}:S}"];
+	Node0x2e3a850 [shape=record,label="{\{0:i32\}:SM}"];
+	Node0x2e3ab50 [shape=record,label="{\{void\}:SM}"];
+	Node0x2e3a090 [shape=record,label="{\{void\}:S}"];
+	Node0x2e3a220 [shape=record,label="{\{void\}:S}"];
+	Node0x2e22508 [shape=plaintext, label =".str"];
+	Node0x2e22508 -> Node0x2e39f90[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2e23d78 [shape=plaintext, label ="  %8 = call i8* @strcpy_stub(i8* %6, i8* %7)"];
+	Node0x2e23d78 -> Node0x2e3a090[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2e23138 [shape=plaintext, label ="  %4 = alloca [10 x i8], align 1"];
+	Node0x2e23138 -> Node0x2e3a220[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2e229b8 [shape=plaintext, label ="  %1 = alloca i32, align 4"];
+	Node0x2e229b8 -> Node0x2e3a850[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2e230d8 [shape=plaintext, label ="  %3 = alloca [10 x i8], align 1"];
+	Node0x2e230d8 -> Node0x2e3a090[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2e23048 [shape=plaintext, label ="  %2 = alloca [6 x i8], align 1"];
+	Node0x2e23048 -> Node0x2e3ab50[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2e24018 [shape=plaintext, label ="  %10 = call i8* @strcpy_stub(i8* %9, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str, i32 0, i32 0))"];
+	Node0x2e24018 -> Node0x2e3a220[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2e21b08 [shape=plaintext, label ="main.str1"];
+	Node0x2e21b08 -> Node0x2e3aa20[arrowtail=tee,label="0",fontsize=8,color=purple];
+}

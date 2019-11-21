@@ -1,0 +1,25 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x170ae80 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x170abc0 [shape=record,label="{\{0:i32\}:SMR}"];
+	Node0x170d7e0 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SR}"];
+	Node0x16f63e8 [shape=plaintext, label ="  %17 = phi i8* [ %14, %13 ], [ null, %15 ]"];
+	Node0x16f63e8 -> Node0x170d7e0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x16f6618 [shape=plaintext, label ="  %5 = load i8*, i8** %3, align 8"];
+	Node0x16f6618 -> Node0x170d7e0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x16f6198 [shape=plaintext, label ="  %3 = alloca i8*, align 8"];
+	Node0x16f6198 -> Node0x170ae80[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x16f6468 [shape=plaintext, label ="  %4 = alloca i32, align 4"];
+	Node0x16f6468 -> Node0x170abc0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x16f6cf8 [shape=plaintext, label ="  %14 = load i8*, i8** %3, align 8"];
+	Node0x16f6cf8 -> Node0x170d7e0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x16f6898 [shape=plaintext, label ="  %6 = load i8*, i8** %3, align 8"];
+	Node0x16f6898 -> Node0x170d7e0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x16f5b80 [shape=plaintext,fontcolor=blue, label ="strchr_stub#0"];
+	Node0x16f5b80 -> Node0x170d7e0[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x16f5a98 [shape=plaintext,fontcolor=blue, label ="strchr_stub#Ret"];
+	Node0x16f5a98 -> Node0x170d7e0[arrowtail=tee,color=gray63,label="0",fontsize=8];
+	Node0x170ae80:s0 -> Node0x170d7e0[arrowtail=tee,label="0, i8*",fontsize=8];
+}

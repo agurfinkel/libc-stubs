@@ -1,0 +1,36 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x1c8fe00 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SR}"];
+	Node0x1c902a0 [shape=record,label="{\{void\}:}"];
+	Node0x1c907b0 [shape=record,label="{\{0:i32\}:SM}"];
+	Node0x1c908c0 [shape=record,label="{\{0:i8\}:SM}"];
+	Node0x1c91250 [shape=record,label="{\{0:i8\}:SM}"];
+	Node0x1c91370 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x1c91420 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x1c78858 [shape=plaintext, label ="  %4 = alloca i8*, align 8"];
+	Node0x1c78858 -> Node0x1c91370[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c78908 [shape=plaintext, label ="  %5 = alloca i8*, align 8"];
+	Node0x1c78908 -> Node0x1c91420[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c79118 [shape=plaintext, label ="  %8 = load i8*, i8** %4, align 8"];
+	Node0x1c79118 -> Node0x1c8fe00[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c724d8 [shape=plaintext, label ="main.vowel"];
+	Node0x1c724d8 -> Node0x1c8fe00[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c78e38 [shape=plaintext, label ="  %6 = call i8* @mystrchr(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @main.vowel, i32 0, i32 0), i32 105)"];
+	Node0x1c78e38 -> Node0x1c8fe00[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c79208 [shape=plaintext, label ="  %9 = load i8*, i8** %5, align 8"];
+	Node0x1c79208 -> Node0x1c8fe00[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c78738 [shape=plaintext, label ="  %1 = alloca i32, align 4"];
+	Node0x1c78738 -> Node0x1c907b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c72ee8 [shape=plaintext, label =".str"];
+	Node0x1c72ee8 -> Node0x1c902a0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c78798 [shape=plaintext, label ="  %2 = alloca i8, align 1"];
+	Node0x1c78798 -> Node0x1c908c0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c78fd8 [shape=plaintext, label ="  %7 = call i8* @mystrchr(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @main.vowel, i32 0, i32 0), i32 98)"];
+	Node0x1c78fd8 -> Node0x1c8fe00[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c787f8 [shape=plaintext, label ="  %3 = alloca i8, align 1"];
+	Node0x1c787f8 -> Node0x1c91250[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x1c91370:s0 -> Node0x1c8fe00[arrowtail=tee,label="0, i8*",fontsize=8];
+	Node0x1c91420:s0 -> Node0x1c8fe00[arrowtail=tee,label="0, i8*",fontsize=8];
+}

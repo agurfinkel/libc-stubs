@@ -1,0 +1,23 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x2e37bb0 [shape=record,label="{\{void\}:S}"];
+	Node0x2e38050 [shape=record,label="{\{void\}:SM}"];
+	Node0x2e381c0 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x2e38ac0 [shape=record,label="{\{0:i8*\}:SM|{<s0>\<0, i8*\>}}"];
+	Node0x2e238e8 [shape=plaintext, label ="  %3 = alloca i8*, align 8"];
+	Node0x2e238e8 -> Node0x2e381c0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2e24388 [shape=plaintext, label ="  %4 = alloca i8*, align 8"];
+	Node0x2e24388 -> Node0x2e38ac0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2e24538 [shape=plaintext, label ="  %5 = load i8*, i8** %3, align 8"];
+	Node0x2e24538 -> Node0x2e37bb0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2e23cf8 [shape=plaintext,fontcolor=blue, label ="strcpy_stub#1"];
+	Node0x2e23cf8 -> Node0x2e38050[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x2e23cd0 [shape=plaintext,fontcolor=blue, label ="strcpy_stub#0"];
+	Node0x2e23cd0 -> Node0x2e37bb0[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x2e23c18 [shape=plaintext,fontcolor=blue, label ="strcpy_stub#Ret"];
+	Node0x2e23c18 -> Node0x2e37bb0[arrowtail=tee,color=gray63,label="0",fontsize=8];
+	Node0x2e381c0:s0 -> Node0x2e37bb0[arrowtail=tee,label="0, i8*",fontsize=8];
+	Node0x2e38ac0:s0 -> Node0x2e38050[arrowtail=tee,label="0, i8*",fontsize=8];
+}

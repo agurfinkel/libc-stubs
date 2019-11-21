@@ -1,0 +1,31 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x2563ca0 [shape=record,label="{\{void\}:S}"];
+	Node0x2564030 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x2563d30 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x2566980 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SR}"];
+	Node0x254ff38 [shape=plaintext, label ="  %14 = load i8*, i8** %3, align 8"];
+	Node0x254ff38 -> Node0x2566980[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254f348 [shape=plaintext, label ="  %3 = alloca i8*, align 8"];
+	Node0x254f348 -> Node0x2564030[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254fad8 [shape=plaintext, label ="  %6 = load i8*, i8** %3, align 8"];
+	Node0x254fad8 -> Node0x2566980[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254f6a8 [shape=plaintext, label ="  %4 = alloca i8*, align 8"];
+	Node0x254f6a8 -> Node0x2563d30[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254f628 [shape=plaintext, label ="  %17 = phi i8* [ %14, %13 ], [ null, %15 ]"];
+	Node0x254f628 -> Node0x2566980[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254fc88 [shape=plaintext, label ="  %9 = load i8*, i8** %4, align 8"];
+	Node0x254fc88 -> Node0x2563ca0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254f858 [shape=plaintext, label ="  %5 = load i8*, i8** %3, align 8"];
+	Node0x254f858 -> Node0x2566980[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254ed78 [shape=plaintext,fontcolor=blue, label ="strstr_stub#1"];
+	Node0x254ed78 -> Node0x2563ca0[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x254ed50 [shape=plaintext,fontcolor=blue, label ="strstr_stub#0"];
+	Node0x254ed50 -> Node0x2566980[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x254ec68 [shape=plaintext,fontcolor=blue, label ="strstr_stub#Ret"];
+	Node0x254ec68 -> Node0x2566980[arrowtail=tee,color=gray63,label="0",fontsize=8];
+	Node0x2564030:s0 -> Node0x2566980[arrowtail=tee,label="0, i8*",fontsize=8];
+	Node0x2563d30:s0 -> Node0x2563ca0[arrowtail=tee,label="0, i8*",fontsize=8];
+}

@@ -1,0 +1,39 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x2ab9600 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SR}"];
+	Node0x2abb460 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SR}"];
+	Node0x2abb550 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SR}"];
+	Node0x2abb630 [shape=record,label="{\{void\}:}"];
+	Node0x2abd8e0 [shape=record,label="{\{void\}:}"];
+	Node0x2abda70 [shape=record,label="{\{0:i32\}:SM}"];
+	Node0x2abdb40 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x2abdc40 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x2aa4a48 [shape=plaintext, label ="  %5 = call i8* @mystrpbrk(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @main.s1, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @main.s3, i32 0, i32 0))"];
+	Node0x2aa4a48 -> Node0x2ab9600[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2aa4e48 [shape=plaintext, label ="  %8 = load i8*, i8** %2, align 8"];
+	Node0x2aa4e48 -> Node0x2ab9600[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a9b148 [shape=plaintext, label ="main.s2"];
+	Node0x2a9b148 -> Node0x2abb460[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2aa4328 [shape=plaintext, label ="  %1 = alloca i32, align 4"];
+	Node0x2aa4328 -> Node0x2abda70[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a9b438 [shape=plaintext, label =".str.1"];
+	Node0x2a9b438 -> Node0x2abd8e0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2aa4388 [shape=plaintext, label ="  %2 = alloca i8*, align 8"];
+	Node0x2aa4388 -> Node0x2abdb40[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2aa4b88 [shape=plaintext, label ="  %6 = load i8*, i8** %3, align 8"];
+	Node0x2aa4b88 -> Node0x2ab9600[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2aa43e8 [shape=plaintext, label ="  %3 = alloca i8*, align 8"];
+	Node0x2aa43e8 -> Node0x2abdc40[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2aa4808 [shape=plaintext, label ="  %4 = call i8* @mystrpbrk(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @main.s1, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @main.s2, i32 0, i32 0))"];
+	Node0x2aa4808 -> Node0x2ab9600[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a9a758 [shape=plaintext, label ="main.s1"];
+	Node0x2a9a758 -> Node0x2ab9600[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a9b338 [shape=plaintext, label =".str"];
+	Node0x2a9b338 -> Node0x2abb630[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a9b238 [shape=plaintext, label ="main.s3"];
+	Node0x2a9b238 -> Node0x2abb550[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2abdb40:s0 -> Node0x2ab9600[arrowtail=tee,label="0, i8*",fontsize=8];
+	Node0x2abdc40:s0 -> Node0x2ab9600[arrowtail=tee,label="0, i8*",fontsize=8];
+}

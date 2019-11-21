@@ -1,0 +1,38 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x2f5e8c0 [shape=record,label="{\{void\}:}"];
+	Node0x2f5f170 [shape=record,label="{\{void\}:}"];
+	Node0x2f5f200 [shape=record,label="{\{void\}:}"];
+	Node0x2f5f330 [shape=record,label="{\{void\}:}"];
+	Node0x2f5f430 [shape=record,label="{\{0:i32\}:SM}"];
+	Node0x2f5f5c0 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x2f5f690 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x2f60fe0 [shape=record,label="{\{void\}:E}"];
+	Node0x2f61950 [shape=record,label="{\{void\}:E}"];
+	Node0x2f498f8 [shape=plaintext, label ="main.str2"];
+	Node0x2f498f8 -> Node0x2f5f170[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f49868 [shape=plaintext, label ="  %1 = alloca i32, align 4"];
+	Node0x2f49868 -> Node0x2f5f430[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f4b088 [shape=plaintext, label ="  %6 = load i8*, i8** %2, align 8"];
+	Node0x2f4b088 -> Node0x2f60fe0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f4b0e8 [shape=plaintext, label ="  %7 = load i8*, i8** %3, align 8"];
+	Node0x2f4b0e8 -> Node0x2f61950[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f4acc8 [shape=plaintext, label ="  %4 = call i8* @strstr(i8* getelementptr inbounds ([10 x i8], [10 x i8]* @main.str1, i32 0, i32 0), i8* getelementptr inbounds ([20 x i8], [20 x i8]* @main.str2, i32 0, i32 0)) #3"];
+	Node0x2f4acc8 -> Node0x2f60fe0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f4a738 [shape=plaintext, label ="  %3 = alloca i8*, align 8"];
+	Node0x2f4a738 -> Node0x2f5f690[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f4af48 [shape=plaintext, label ="  %5 = call i8* @strstr(i8* getelementptr inbounds ([10 x i8], [10 x i8]* @main.str1, i32 0, i32 0), i8* getelementptr inbounds ([30 x i8], [30 x i8]* @main.str3, i32 0, i32 0)) #3"];
+	Node0x2f4af48 -> Node0x2f61950[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f49ab8 [shape=plaintext, label ="main.str3"];
+	Node0x2f49ab8 -> Node0x2f5f200[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f48eb8 [shape=plaintext, label ="main.str1"];
+	Node0x2f48eb8 -> Node0x2f5e8c0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f49bd8 [shape=plaintext, label =".str"];
+	Node0x2f49bd8 -> Node0x2f5f330[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f4a6a8 [shape=plaintext, label ="  %2 = alloca i8*, align 8"];
+	Node0x2f4a6a8 -> Node0x2f5f5c0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2f5f5c0:s0 -> Node0x2f60fe0[arrowtail=tee,label="0, i8*",fontsize=8];
+	Node0x2f5f690:s0 -> Node0x2f61950[arrowtail=tee,label="0, i8*",fontsize=8];
+}

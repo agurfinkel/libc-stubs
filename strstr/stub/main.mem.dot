@@ -1,0 +1,36 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x25666b0 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SR}"];
+	Node0x25636d0 [shape=record,label="{\{void\}:S}"];
+	Node0x2566740 [shape=record,label="{\{void\}:S}"];
+	Node0x2566870 [shape=record,label="{\{void\}:}"];
+	Node0x2567350 [shape=record,label="{\{0:i32\}:SM}"];
+	Node0x25674e0 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x25675b0 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x254da18 [shape=plaintext, label ="main.str2"];
+	Node0x254da18 -> Node0x25636d0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254e7c8 [shape=plaintext, label ="  %2 = alloca i8*, align 8"];
+	Node0x254e7c8 -> Node0x25674e0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254dbd8 [shape=plaintext, label ="main.str3"];
+	Node0x254dbd8 -> Node0x2566740[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254cfd8 [shape=plaintext, label ="main.str1"];
+	Node0x254cfd8 -> Node0x25666b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254dcf8 [shape=plaintext, label =".str"];
+	Node0x254dcf8 -> Node0x2566870[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254f1d8 [shape=plaintext, label ="  %7 = load i8*, i8** %3, align 8"];
+	Node0x254f1d8 -> Node0x25666b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254edf8 [shape=plaintext, label ="  %4 = call i8* @strstr_stub(i8* getelementptr inbounds ([10 x i8], [10 x i8]* @main.str1, i32 0, i32 0), i8* getelementptr inbounds ([20 x i8], [20 x i8]* @main.str2, i32 0, i32 0))"];
+	Node0x254edf8 -> Node0x25666b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254f178 [shape=plaintext, label ="  %6 = load i8*, i8** %2, align 8"];
+	Node0x254f178 -> Node0x25666b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254e858 [shape=plaintext, label ="  %3 = alloca i8*, align 8"];
+	Node0x254e858 -> Node0x25675b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254d988 [shape=plaintext, label ="  %1 = alloca i32, align 4"];
+	Node0x254d988 -> Node0x2567350[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x254f038 [shape=plaintext, label ="  %5 = call i8* @strstr_stub(i8* getelementptr inbounds ([10 x i8], [10 x i8]* @main.str1, i32 0, i32 0), i8* getelementptr inbounds ([30 x i8], [30 x i8]* @main.str3, i32 0, i32 0))"];
+	Node0x254f038 -> Node0x25666b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x25674e0:s0 -> Node0x25666b0[arrowtail=tee,label="0, i8*",fontsize=8];
+	Node0x25675b0:s0 -> Node0x25666b0[arrowtail=tee,label="0, i8*",fontsize=8];
+}

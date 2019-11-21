@@ -1,0 +1,31 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x2a33020 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SMR}"];
+	Node0x2a335d0 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SMR}"];
+	Node0x2a33960 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x2a33660 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x2a20078 [shape=plaintext, label ="  %18 = load i8*, i8** %3, align 8"];
+	Node0x2a20078 -> Node0x2a33020[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a1e7d8 [shape=plaintext, label ="  %4 = alloca i8*, align 8"];
+	Node0x2a1e7d8 -> Node0x2a33660[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a1eee8 [shape=plaintext, label ="  %3 = alloca i8*, align 8"];
+	Node0x2a1eee8 -> Node0x2a33960[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a1dc88 [shape=plaintext, label ="  %5 = load i8*, i8** %3, align 8"];
+	Node0x2a1dc88 -> Node0x2a33020[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a1f9b8 [shape=plaintext, label ="  %7 = load i8*, i8** %3, align 8"];
+	Node0x2a1f9b8 -> Node0x2a33020[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a1fcf8 [shape=plaintext, label ="  %12 = load i8*, i8** %4, align 8"];
+	Node0x2a1fcf8 -> Node0x2a335d0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a1f888 [shape=plaintext, label ="  %6 = load i8*, i8** %4, align 8"];
+	Node0x2a1f888 -> Node0x2a335d0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2a1ebc8 [shape=plaintext,fontcolor=blue, label ="strcat_stub#1"];
+	Node0x2a1ebc8 -> Node0x2a335d0[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x2a1eba0 [shape=plaintext,fontcolor=blue, label ="strcat_stub#0"];
+	Node0x2a1eba0 -> Node0x2a33020[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x2a1eae8 [shape=plaintext,fontcolor=blue, label ="strcat_stub#Ret"];
+	Node0x2a1eae8 -> Node0x2a33020[arrowtail=tee,color=gray63,label="0",fontsize=8];
+	Node0x2a33960:s0 -> Node0x2a33020[arrowtail=tee,label="0, i8*",fontsize=8];
+	Node0x2a33660:s0 -> Node0x2a335d0[arrowtail=tee,label="0, i8*",fontsize=8];
+}

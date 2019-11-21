@@ -1,0 +1,33 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x219c080 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SMR}"];
+	Node0x219e040 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x219ea40 [shape=record,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x219f060 [shape=record,color=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SMR}"];
+	Node0x2184208 [shape=plaintext, label ="  %5 = load i8*, i8** %3, align 8"];
+	Node0x2184208 -> Node0x219f060[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2184268 [shape=plaintext, label ="  %6 = load i8*, i8** %3, align 8"];
+	Node0x2184268 -> Node0x219f060[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x21843b0 [shape=plaintext, label ="  %8 = getelementptr inbounds i8, i8* %5, i64 %7"];
+	Node0x21843b0 -> Node0x219f060[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2183ff8 [shape=plaintext, label ="  %3 = alloca i8*, align 8"];
+	Node0x2183ff8 -> Node0x219e040[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2184058 [shape=plaintext, label ="  %4 = alloca i8*, align 8"];
+	Node0x2184058 -> Node0x219ea40[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x21844a8 [shape=plaintext, label ="  %9 = load i8*, i8** %4, align 8"];
+	Node0x21844a8 -> Node0x219c080[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2184538 [shape=plaintext, label ="  %10 = call i8* @mystrcpy(i8* %8, i8* %9)"];
+	Node0x2184538 -> Node0x219f060[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x21845a8 [shape=plaintext, label ="  %11 = load i8*, i8** %3, align 8"];
+	Node0x21845a8 -> Node0x219f060[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x2182f38 [shape=plaintext,fontcolor=blue, label ="mystrcat#1"];
+	Node0x2182f38 -> Node0x219c080[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x2182f10 [shape=plaintext,fontcolor=blue, label ="mystrcat#0"];
+	Node0x2182f10 -> Node0x219f060[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x2182e08 [shape=plaintext,fontcolor=blue, label ="mystrcat#Ret"];
+	Node0x2182e08 -> Node0x219f060[arrowtail=tee,color=gray63,label="0",fontsize=8];
+	Node0x219e040:s0 -> Node0x219f060[arrowtail=tee,label="0, i8*",fontsize=8];
+	Node0x219ea40:s0 -> Node0x219c080[arrowtail=tee,label="0, i8*",fontsize=8];
+}
