@@ -1,0 +1,11 @@
+close 47
+wait 17
+abort 17
+accept 9
+realloc 8
+fprintf 7
+free 5
+malloc 4
+memcpy 1
+memcmp 1
+calloc 1

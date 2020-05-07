@@ -1,0 +1,21 @@
+#!/bin/bash
+filename='musllvm_funcs.txt'
+output='ref_counts.txt'
+$(gtags)
+>$output
+while read line; do
+	echo "Searching for refs to " $line
+	GLOB_REFS=$(global -rs $line)
+	#echo "References found in files:" $GLOB_REFS 
+	ref_count=0
+	for file in $GLOB_REFS
+		do
+			ref_count=$(($ref_count + $(grep -o "[[:space:]]\+"$line"[[:space:]]*(" $file | wc -l)))
+		done
+	#echo "Found" $ref_count "references to" $line "in source tree"
+	if [ $ref_count -gt 0 ]
+	then
+		echo $line $ref_count >> $output
+	fi
+done < $filename
+echo "$(sort -k2 -n -r $output)" > $output
