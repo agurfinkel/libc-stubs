@@ -1,0 +1,20 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x3b8aad0 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:R}"];
+	Node0x3b89e30 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:R}"];
+	Node0x3b8a610 [shape=record,fillcolor=gray, style=filled,label="{\{0:i32\}:SM}"];
+	Node0x3b8db00 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:SM}"];
+	Node0x3b9eb10 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:SMR}"];
+	Node0x3b886e8 [shape=plaintext, label ="__const.main.dest"];
+	Node0x3b886e8 -> Node0x3b89e30[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x3b88aa8 [shape=plaintext, label ="  %1 = alloca i32, align 4"];
+	Node0x3b88aa8 -> Node0x3b8a610[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x3b87ca8 [shape=plaintext, label ="__const.main.src"];
+	Node0x3b87ca8 -> Node0x3b8aad0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x3b88b28 [shape=plaintext, label ="  %2 = alloca [4 x i32], align 16"];
+	Node0x3b88b28 -> Node0x3b8db00[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x3b88bb8 [shape=plaintext, label ="  %3 = alloca [5 x i32], align 16"];
+	Node0x3b88bb8 -> Node0x3b9eb10[arrowtail=tee,label="0",fontsize=8,color=purple];
+}

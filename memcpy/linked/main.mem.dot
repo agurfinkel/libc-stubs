@@ -1,0 +1,22 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x4ac86b0 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:R}"];
+	Node0x4ae8e30 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:R}"];
+	Node0x4ae8ed0 [shape=record,fillcolor=gray, style=filled,label="{\{0:i32\}:SM}"];
+	Node0x4ae8f90 [shape=record,fillcolor=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SM}"];
+	Node0x4ae9070 [shape=record,fillcolor=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SMR}"];
+	Node0x4ab1448 [shape=plaintext, label ="__const.main.src"];
+	Node0x4ab1448 -> Node0x4ac86b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x4ab3470 [shape=plaintext, label ="  %10 = call i8* @mymemcpy(i8* %7, i8* %9, i64 16)"];
+	Node0x4ab3470 -> Node0x4ae8f90[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x4ab2358 [shape=plaintext, label ="  %3 = alloca [5 x i32], align 16"];
+	Node0x4ab2358 -> Node0x4ae9070[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x4ab1e88 [shape=plaintext, label ="__const.main.dest"];
+	Node0x4ab1e88 -> Node0x4ae8e30[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x4ab2248 [shape=plaintext, label ="  %1 = alloca i32, align 4"];
+	Node0x4ab2248 -> Node0x4ae8ed0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x4ab22c8 [shape=plaintext, label ="  %2 = alloca [4 x i32], align 16"];
+	Node0x4ab22c8 -> Node0x4ae8f90[arrowtail=tee,label="0",fontsize=8,color=purple];
+}
