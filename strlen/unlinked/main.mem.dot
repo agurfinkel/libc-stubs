@@ -1,0 +1,14 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x37d8f60 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:R}"];
+	Node0x37d7a00 [shape=record,fillcolor=gray, style=filled,label="{\{0:i32\}:SM}"];
+	Node0x37d8210 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:SM}"];
+	Node0x37d62b8 [shape=plaintext, label ="  %1 = alloca i32, align 4"];
+	Node0x37d62b8 -> Node0x37d7a00[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x37d6978 [shape=plaintext, label ="  %2 = alloca [6 x i8], align 1"];
+	Node0x37d6978 -> Node0x37d8210[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x37d55f8 [shape=plaintext, label ="__const.main.str1"];
+	Node0x37d55f8 -> Node0x37d8f60[arrowtail=tee,label="0",fontsize=8,color=purple];
+}

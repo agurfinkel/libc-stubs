@@ -1,0 +1,16 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x45e8d50 [shape=record,fillcolor=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SMR}"];
+	Node0x45e72b0 [shape=record,fillcolor=gray, style=filled,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x45e5ec8 [shape=plaintext, label ="  %4 = load i8*, i8** %2, align 8"];
+	Node0x45e5ec8 -> Node0x45e8d50[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x45e54c8 [shape=plaintext, label ="  %2 = alloca i8*, align 8"];
+	Node0x45e54c8 -> Node0x45e72b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x45e5c18 [shape=plaintext, label ="  %3 = load i8*, i8** %2, align 8"];
+	Node0x45e5c18 -> Node0x45e8d50[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x45e53f0 [shape=plaintext,fontcolor=blue, label ="strlen_stub#0"];
+	Node0x45e53f0 -> Node0x45e8d50[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x45e72b0:s0 -> Node0x45e8d50[arrowtail=tee,label="0, i8*",fontsize=8];
+}
