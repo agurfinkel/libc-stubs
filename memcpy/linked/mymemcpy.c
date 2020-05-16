@@ -1,6 +1,7 @@
 #include <string.h>
 #include <stdint.h>
 #include <endian.h>
+#include "mymemcpy.h"
 
 void *mymemcpy(void *restrict dest, const void *restrict src, size_t n)
 {
