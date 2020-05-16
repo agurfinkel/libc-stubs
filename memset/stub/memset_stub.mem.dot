@@ -1,0 +1,31 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x44e8170 [shape=record,fillcolor=chocolate1, style=filled,label="{OFFSET-COLLAPSED:SHM}"];
+	Node0x44e6730 [shape=record,fillcolor=gray, style=filled,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x44e6f40 [shape=record,fillcolor=gray, style=filled,label="{\{0:i32\}:SMR}"];
+	Node0x44e76a0 [shape=record,fillcolor=gray, style=filled,label="{\{0:i64\}:SMR}"];
+	Node0x44eab30 [shape=record,fillcolor=gray, style=filled,label="{\{0:i32\}:SMR}"];
+	Node0x44e4b68 [shape=plaintext, label ="  %17 = load i8*, i8** %4, align 8"];
+	Node0x44e4b68 -> Node0x44e8170[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x44e4fe8 [shape=plaintext, label ="  %25 = load i8*, i8** %4, align 8"];
+	Node0x44e4fe8 -> Node0x44e8170[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x44e43b8 [shape=plaintext, label ="  %8 = load i8*, i8** %4, align 8"];
+	Node0x44e43b8 -> Node0x44e8170[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x44e4068 [shape=plaintext, label ="  %4 = alloca i8*, align 8"];
+	Node0x44e4068 -> Node0x44e6730[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x44e4ca0 [shape=plaintext, label ="  %20 = getelementptr inbounds i8, i8* %17, i64 %19"];
+	Node0x44e4ca0 -> Node0x44e8170[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x44e4118 [shape=plaintext, label ="  %5 = alloca i32, align 4"];
+	Node0x44e4118 -> Node0x44e6f40[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x44e4178 [shape=plaintext, label ="  %6 = alloca i64, align 8"];
+	Node0x44e4178 -> Node0x44e76a0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x44e41d8 [shape=plaintext, label ="  %7 = alloca i32, align 4"];
+	Node0x44e41d8 -> Node0x44eab30[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x44e3f40 [shape=plaintext,fontcolor=blue, label ="memset_stub#0"];
+	Node0x44e3f40 -> Node0x44e8170[tailclip=false,color=dodgerblue3,label="0",fontsize=8];
+	Node0x44bbb58 [shape=plaintext,fontcolor=blue, label ="memset_stub#Ret"];
+	Node0x44bbb58 -> Node0x44e8170[arrowtail=tee,color=gray63,label="0",fontsize=8];
+	Node0x44e6730:s0 -> Node0x44e8170[arrowtail=tee,label="0, i8*",fontsize=8];
+}

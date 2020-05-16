@@ -1,0 +1,23 @@
+digraph unnamed {
+	graph [center=true, ratio=true, bgcolor=lightgray, fontname=Helvetica];
+	node  [fontname=Helvetica, fontsize=11];
+
+	Node0x4909720 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:R}"];
+	Node0x49082b0 [shape=record,fillcolor=gray, style=filled,label="{\{0:i32\}:SM}"];
+	Node0x4908a70 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:SM}"];
+	Node0x4908b10 [shape=record,fillcolor=gray, style=filled,label="{\{0:i8*\}:SMR|{<s0>\<0, i8*\>}}"];
+	Node0x491edc0 [shape=record,fillcolor=gray, style=filled,label="{\{void\}:HM}"];
+	Node0x4907780 [shape=plaintext, label ="  %5 = call i8* @malloc(i64 10)"];
+	Node0x4907780 -> Node0x491edc0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x49056f8 [shape=plaintext, label ="__const.main.p1"];
+	Node0x49056f8 -> Node0x4909720[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x4906b28 [shape=plaintext, label ="  %3 = alloca i8*, align 8"];
+	Node0x4906b28 -> Node0x4908b10[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x49063d8 [shape=plaintext, label ="  %1 = alloca i32, align 4"];
+	Node0x49063d8 -> Node0x49082b0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x4906a98 [shape=plaintext, label ="  %2 = alloca [4 x i8], align 1"];
+	Node0x4906a98 -> Node0x4908a70[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x4907da8 [shape=plaintext, label ="  %7 = load i8*, i8** %3, align 8"];
+	Node0x4907da8 -> Node0x491edc0[arrowtail=tee,label="0",fontsize=8,color=purple];
+	Node0x4908b10:s0 -> Node0x491edc0[arrowtail=tee,label="0, i8*",fontsize=8];
+}
