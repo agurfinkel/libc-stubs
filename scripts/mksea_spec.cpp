@@ -427,7 +427,7 @@ void processFunc(int index, std::ofstream &out_file)
       }
       if (recFunc.action.mergeNodes[actionIndex])
       {
-        toMerge.push_back(param);
+        toMerge.push_back(getVarName(param));
       }
 
       //only increment action index when we have a pointer to memory
@@ -507,3 +507,4 @@ int main()
 
   return 0;
 }
+
