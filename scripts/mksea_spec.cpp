@@ -457,7 +457,7 @@ void processFunc(int index, std::ofstream &out_file)
     for (auto param : decl.params)
     {
       if (isPtrType(param))
-        out_file << collapse(param);
+        out_file << collapse(getVarName(param));
     }
   }
 

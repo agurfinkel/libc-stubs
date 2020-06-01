@@ -6,8 +6,8 @@ sea_dsa_set_read(b);
 char * retVal;
 sea_dsa_alias(s, retVal);
 sea_dsa_collapse(retVal);
-sea_dsa_collapse(const char *s);
-sea_dsa_collapse(const char *b);
+sea_dsa_collapse(s);
+sea_dsa_collapse(b);
 return retVal;
 
 }

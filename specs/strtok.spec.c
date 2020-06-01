@@ -8,8 +8,8 @@ sea_dsa_set_modified(sep);
 char * retVal;
 sea_dsa_alias(s, retVal);
 sea_dsa_collapse(retVal);
-sea_dsa_collapse(char *restrict s);
-sea_dsa_collapse(const char *restrict sep);
+sea_dsa_collapse(s);
+sea_dsa_collapse(sep);
 return retVal;
 
 }
